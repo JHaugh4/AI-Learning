@@ -13,6 +13,13 @@ This section is for resources pertaining to how AI works.
 - [manning](https://www.manning.com/books/build-a-large-language-model-from-scratch)
 - [github](https://github.com/rasbt/LLMs-from-scratch)
 
+### Videos
+
+#### 3blue1brown: Deep Learning
+3blue1brown has a series on Deep Learning that's really good, the chapters below on LLMs/transformer don't rely too much on the preceding sections.
+- [Transformers, the tech behind LLMs | Deep Learning Chapter 5](https://youtu.be/wjZofJX0v4M?si=siAZ0ZmMqrtpwb4d)
+- [Attention in transformers, step-by-step | Deep Learning Chapter 6](https://youtu.be/eMlx5fFNoYc?si=w8w3N6weLvTwZ57i)
+
 ## Effective Use
 
 ## Ethics of AI
