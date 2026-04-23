@@ -1,8 +1,12 @@
+## Guidelines
+Main is for abstract interfaces (ex. Tokenizer, Data Samplers)
+Personal repositories will be playgrounds/sandboxes
+
 # AI Resources
 
 This is a repository which aims to collect resources on learning about AI, how to use it effectively, the ethics of using it, and the capabilities of free and open source models.
 
-## How it works
+## How AI works
 
 This section is for resources pertaining to how AI works.
 
