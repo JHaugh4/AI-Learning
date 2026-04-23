@@ -1,5 +1,5 @@
 ## Guidelines
-Main is for abstract interfaces (ex. Tokenizer, Data Samplers)
+Main is for abstract interfaces (ex. Tokenizer, Data Samplers)  
 Personal repositories will be playgrounds/sandboxes
 
 # AI Resources
