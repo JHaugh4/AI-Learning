@@ -54,6 +54,25 @@ $\mathbf x_i \in \mathbb{R}^d$
 - A single embedding vector, which is the $i$-th element of the input sequence to an attention block.
 - SR denotes it by $x^{(i)}$ and calls it a token vector.
 
+$XX^T$
+- Computes all pairwise dot products for the rows of $X$.
+- $(XX^T)_{ij} = \mathbf x_i \cdot \mathbf x_j = \mathbf x_i^T \mathbf x_j$.
+
+$\sigma (\mathbf z)_i = \dfrac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$
+- The softmax function.
+- Where $\mathbf z \in \mathbb{R}^K$.
+
+$w_{ij}$
+- In the "simplified" attention block: the attention score for a query $\mathbf x_i$ with respect to input $\mathbf x_j$.
+- In the "standard" attention block: we project into the key and query spaces before computing the attention score.
+- $\mathbf w_i \in \mathbb{R}^T$ contains the attention score for query $i$ with respect to all inputs in the context.
+
+$a_{ij}$
+- Attention weight for a query $\mathbf x_i$ and input $\mathbf x_j$.
+- Attention weights are arrived at by normalizing attention scores with respect to a query, eg if we normalized by just dividing by row sum, $a_{21} = \dfrac{w_{21}}{\displaystyle \sum_j w_{2j}}$.
+- In practice we use softmax to normalize: $\mathbf a_i = \sigma(\mathbf w_i)$.
+- In the scaled dot product transformer architecture, we would instead project 
+
 $W_q \in \mathbb{R}^{d \times d}$
 - The query weight matrix.
 - There is a single query weight matrix for each attention head.
