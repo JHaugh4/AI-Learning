@@ -32,7 +32,8 @@ Skip `uv` entirely if you prefer. You won't get the locked versions, but
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -e ".[dev]"          # editable install + dev tools
+pip install -e .                 # editable install (runtime deps)
+pip install --group dev          # optional: dev tools (needs pip >= 25.1)
 ```
 
 Then run things directly (`jupyter lab`, `pytest`, etc.) with the venv active.

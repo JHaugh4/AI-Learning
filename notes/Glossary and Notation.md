@@ -4,11 +4,13 @@ As per usual there is plenty of variation in what people call things and how the
 
 #### Tokenization and Embedding (Chapter 2)
 
-$V = \{ \text{vocabulary tokens} \}$
+$V = \lbrace \text{vocabulary tokens} \rbrace$
+- The set of all vocabulary tokens.
 
 $|V| :$ number of tokens in the vocabulary.
 - `torch` calls it `num_embeddings`.
 - SR calls it `vocab_size`.
+- With `tiktoken`'s "gpt2" tokenizer $|V| = 50,257$.
 
 $d:$ Dimensionality of embedding vectors, ie $\mathbf{e} \in \mathbb{R}^d$.
 - `torch` calls it `embedding_dim`.
