@@ -1,3 +1,42 @@
+## How to run
+
+Dependencies and the Python version are declared in `pyproject.toml`, with exact
+versions pinned in `uv.lock`. Library code lives in `src/ai_learning/` (importable
+as `ai_learning`); notebooks live in `notebooks/`. Requires Python 3.12+.
+
+We recommend [`uv`](https://docs.astral.sh/uv/), but it's not required — any standard
+venv + `pip` works too, since everything is in `pyproject.toml`.
+
+### With `uv`
+
+`uv` reads the lockfile, so you get the exact same versions as everyone else.
+
+```bash
+uv sync                  # create .venv and install everything (incl. dev tools)
+uv run jupyter lab       # run a notebook
+uv run pytest            # run tests
+uv run python -m ai_learning   # run package code
+```
+
+No need to activate the venv — `uv run` handles it (this also avoids the
+Windows-vs-Unix activate-script difference).
+
+You can also open a notebook in VSCode if you have the extension, just make sure you pick the
+Python kernel from the venv.
+
+### With `pip`
+
+Skip `uv` entirely if you prefer. You won't get the locked versions, but
+`pyproject.toml` still defines compatible ones.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -e ".[dev]"          # editable install + dev tools
+```
+
+Then run things directly (`jupyter lab`, `pytest`, etc.) with the venv active.
+
 ## Guidelines
 Main is for abstract interfaces (ex. Tokenizer, Data Samplers)  
 Personal repositories will be playgrounds/sandboxes
