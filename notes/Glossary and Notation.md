@@ -71,7 +71,6 @@ $a_{ij}$
 - Attention weight for a query $\mathbf x_i$ and input $\mathbf x_j$.
 - Attention weights are arrived at by normalizing attention scores with respect to a query, eg if we normalized by just dividing by row sum, $a_{21} = \dfrac{w_{21}}{\displaystyle \sum_j w_{2j}}$.
 - In practice we use softmax to normalize: $\mathbf a_i = \sigma(\mathbf w_i)$.
-- In the scaled dot product transformer architecture, we would instead project 
 
 $W_q \in \mathbb{R}^{d \times d}$
 - The query weight matrix.
